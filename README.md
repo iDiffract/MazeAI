@@ -1,5 +1,5 @@
 # MazeAI
-A* Search Algorithm Maze - the application uses Pygame for graphical representation of the maze, the start and target points, and the path found.
+Personally Designed A* Search Algorithm Maze - the application uses Pygame for graphical representation of the maze, the start and target points, and the path found.
 
 ## Features
 Maze UI: 
