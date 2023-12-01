@@ -14,6 +14,20 @@ Pygame Interface:
 
 The application uses Pygame, a set of Python modules designed for writing video games, for its graphical user interface.
 
+## Project Structure
+
+README.md: The markdown file provides a detailed description of the project, its features, and instructions on how to set up and run the project.
+
+game_constants.py: This Python script defines all the constants used across the project. This could include things like default sizes, colors, or other constants.
+
+main.py: This is the primary entry point for the application. It handles the initialization and the main game loop.
+
+maze.py: This Python script contains the logic for generating and managing the maze. It may include classes or functions for creating the maze, checking if a path is blocked, etc.
+
+mazeui.py (WIP): This Python script is responsible for rendering the maze to the screen using Pygame. It may include classes or functions for drawing the walls, paths, and other elements of the maze.
+
+pathfinding.py: This Python script contains the implementation of the pathfinding algorithm (such as A*). It is likely to include functions for calculating the shortest path from the start point to the end point in the maze.
+
 ## Usage
 
 To run the application:
