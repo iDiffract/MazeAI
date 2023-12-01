@@ -28,6 +28,24 @@ mazeui.py (WIP): This Python script is responsible for rendering the maze to the
 
 pathfinding.py: This Python script contains the implementation of the pathfinding algorithm (such as A*). It is likely to include functions for calculating the shortest path from the start point to the end point in the maze.
 
+## A* Algorithm Mechanism in Our Implementation
+
+The A* search algorithm used in our maze is implemented in the function a_star(maze, start, end). Here's a breakdown of the code that ties back to the original mechanism of the A* algorithm:
+
+The heuristic function h(p1, p2) represents h(n) in our A* algorithm. It calculates the Manhattan distance between two points p1 and p2. This is an estimate of the cost from n to the goal.
+
+The frontier is our priority queue in the A* algorithm. It stores nodes on the frontier of the search, with the priority being the lowest cost function f(n) = g(n) + h(n). It is initialized with the start node with a cost of 0.
+
+The dictionary came_from keeps track of the path from the start node to any node n, serving the purpose of maintaining a tree of paths originating at the start node.
+
+The dictionary cost_so_far keeps track of g(n), the cost of the path from the start node to n. It is initialized with the start node having a cost of 0.
+
+Inside the while loop, the node current with the lowest f(n) value is removed from the frontier, and we check if the goal has been reached.
+
+If current is not the goal, we calculate next, the potential future positions from current. We then update g(n) and h(n) for these next nodes, add them to the frontier if they are valid (not a wall and within the maze), and update came_from for path tracking.
+
+The function retrieve_path(came_from, start, end) is used to reconstruct the path from the start to the goal using the came_from dictionary. It starts at the goal and follows the path backwards to the start, adding each node to path. This follows the principle of A* where the least-cost path from a given initial node to one goal node is found.
+
 ## Usage
 
 To run the application:
