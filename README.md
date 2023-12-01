@@ -30,7 +30,7 @@ pathfinding.py: This Python script contains the implementation of the pathfindin
 
 ## A* Algorithm Mechanism in Our Implementation
 
-The A* search algorithm used in our maze is implemented in the function a_star(maze, start, end). Here's a breakdown of the code that ties back to the original mechanism of the A* algorithm:
+The A* search algorithm used in our maze is implemented in the function a_star(maze, start, end) located in pathfinding.py.
 
 The heuristic function h(p1, p2) represents h(n) in our A* algorithm. It calculates the Manhattan distance between two points p1 and p2. This is an estimate of the cost from n to the goal.
 
